@@ -1,0 +1,119 @@
+{
+  "retailers": [
+    {
+      "name": "shopto",
+      "urls": [
+        {
+          "url": "https://www.shopto.net/en/ps5hw01-playstation-5-console-p191472/",
+          "type": "Playstation 5"
+        },
+        {
+          "url": "https://www.shopto.net/en/xbxhw01-xbox-series-x-p191471/?utm_source=website&utm_medium=banner&utm_campaign=Xbox%20Series%20X",
+          "type": "Xbox Series X"
+        }
+      ],
+      "noStockMessage": "Sold out"
+    },
+    {
+      "name": "Simply Games",
+      "urls": [
+        {
+          "url": "https://www.simplygames.com/p/xbox-series-x-console-xbox-one",
+          "type": "Xbox Series X"
+        }
+      ],
+
+      "noStockMessage": "Out Of Stock"
+    },
+    {
+      "name": "Currys",
+      "urls": [
+        {
+          "url": "https://www.currys.co.uk/gbuk/gaming/console-gaming/consoles/microsoft-xbox-series-x-1-tb-10203371-pdt.html",
+          "type": "Xbox Series X"
+        }
+      ],
+      "noStockMessage": "Sorry this item is out of stock"
+    },
+    {
+      "name": "Smyths",
+      "urls": [
+        {
+          "url": "https://www.smythstoys.com/uk/en-gb/video-games-and-tablets/xbox-gaming/xbox-series-x-%7c-s/xbox-series-x-%7c-s-consoles/xbox-series-x-1tb-console/p/192012",
+          "type": "Xbox Series X"
+        }
+      ],
+      "noStockMessage": "Out Of Stock"
+    },
+    {
+      "name": "John Lewis",
+      "urls": [
+        {
+          "url": "https://www.johnlewis.com/microsoft-xbox-series-x-console-1tb-with-wireless-controller-black/p5151987",
+          "type": "Xbox Series X"
+        }
+      ],
+      "noStockMessage": "Out of stock"
+    },
+    {
+      "name": "Scan",
+      "urls": [
+        {
+          "url": "https://www.scan.co.uk/products/playstation-5-console",
+          "type": "Playstation 5"
+        }
+      ],
+      "noStockMessage": "PlayStation 5 Console - Allocation update soon"
+    },
+    {
+      "name": "Amazon",
+      "urls": [
+        {
+          "url": "https://www.amazon.co.uk/Xbox-RRT-00007-Series-X/dp/B08H93GKNJ/ref=sr_1_1?ascsubtag=radiotimes-889910&dchild=1&keywords=xbox+series+x&qid=1605987694&s=videogames&sr=1-1&tag=radtim0b-21",
+          "type": "Xbox Series X"
+        }
+      ],
+      "noStockMessage": "Want us to e-mail you when this item becomes available?"
+    },
+    {
+      "name": "Amazon",
+      "urls": [
+        {
+          "url": "https://www.amazon.co.uk/PlayStation-9395003-5-Console/dp/B08H95Y452/ref=sr_1_1?dchild=1&keywords=ps5&qid=1615656178&sr=8-1",
+          "type": "Playstation 5"
+        }
+      ],
+      "noStockMessage": "Currently unavailable"
+    },
+    {
+      "name": "Argos",
+      "urls": [
+        {
+          "url": "https://www.argos.co.uk/product/8349000",
+          "type": "Playstation 5"
+        }
+      ],
+      "noStockMessage": "We're working hard to make this available as soon as possible."
+    },
+    {
+      "name": "Ebuyer",
+      "urls": [
+        {
+          "url": "https://www.ebuyer.com/1133942-sony-playstation-5-digital-edition-cfi-1016b-",
+          "type": "Playstation 5"
+        }
+      ],
+      "noStockMessage": "***More stock is due soon - Existing Pre-Orders are being prioritised, and is allocated on a first come first served basis.***"
+    },
+    {
+      "name": "Game",
+      "urls": [
+        {
+          "url": "https://www.game.co.uk/playstation-5",
+          "type": "Playstation 5"
+        }
+      ],
+      "noStockMessage": "Out of stock"
+    }
+  ]
+}
