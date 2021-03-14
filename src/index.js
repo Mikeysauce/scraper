@@ -8,20 +8,14 @@ const pollIntervalMs = 30000;
 
 const { EMAIL_TO, EMAIL_USERNAME, EMAIL_PASSWORD } = process.env;
 
-let browserInstance;
-let wsEndpoint;
+let browser;
+let context;
 let transporter;
 let retailers;
 
 const getRetailers = () => retailers;
 
 const spawnBrowser = async ({ name, urls, noStockMessage }) => {
-  const browser = await chromium.connect({ wsEndpoint });
-  const context = await browser.newContext({
-    userAgent:
-      "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/86.0.4240.198 Safari/537.36",
-  });
-
   let page = await context.newPage();
 
   for (let retailer of urls) {
@@ -50,7 +44,7 @@ const spawnBrowser = async ({ name, urls, noStockMessage }) => {
       }
     }
   }
-  await browser.close();
+  page.close();
 };
 
 const scanRetailers = async () => {
@@ -73,8 +67,11 @@ const updateRetailers = async () => {
 
 (async () => {
   await updateRetailers();
-  browserInstance = await chromium.launchServer();
-  wsEndpoint = browserInstance.wsEndpoint();
+  browser = await chromium.launch();
+  context = await browser.newContext({
+    userAgent:
+      "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/86.0.4240.198 Safari/537.36",
+  });
 
   setInterval(updateRetailers, pollIntervalMs * 2);
   setInterval(scanRetailers, pollIntervalMs);
