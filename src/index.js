@@ -41,7 +41,7 @@ const spawnBrowser = async ({ name, urls, noStockMessage }) => {
       );
       try {
         await sendNotification(
-          `${name} possible stock of (${type}) : ${retailer.url}`,
+          `${name} possible stock of (${retailer.type}) : ${retailer.url}`,
         );
       } catch (error) {
         console.log("Tried to send logs, failed.", error);
