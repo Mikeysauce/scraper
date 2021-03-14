@@ -1,6 +1,26 @@
 {
   "retailers": [
     {
+      "name": "Laptops Direct",
+      "urls": [
+        {
+          "url": "https://www.laptopsdirect.co.uk/sony-playstation-5-0711719395003/version.asp",
+          "type": "Playstation 5"
+        }
+      ],
+      "noStockMessage": "SORRY, I’M OUT OF STOCK!"
+    },
+    {
+      "name": "zatu",
+      "urls": [
+        {
+          "url": "https://www.board-game.co.uk/ps5-update/",
+          "type": "Playstation 5"
+        }
+      ],
+      "noStockMessage": "Please note we currently do not have an estimated restock date for the Playstation 5 beyond early 2021."
+    },
+    {
       "name": "shopto",
       "urls": [
         {

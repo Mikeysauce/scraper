@@ -13,6 +13,8 @@ let wsEndpoint;
 let transporter;
 let retailers;
 
+const getRetailers = () => retailers;
+
 const spawnBrowser = async ({ name, urls, noStockMessage }) => {
   const browser = await chromium.connect({ wsEndpoint });
   const context = await browser.newContext({
@@ -56,7 +58,7 @@ const scanRetailers = async () => {
     `${chalk.green(new Date().toDateString())} scanning selected retailers`,
   );
   const startTime = Date.now();
-  await Promise.all(retailers.map(spawnBrowser));
+  await Promise.all(getRetailers().map(spawnBrowser));
   const finishTime = (Date.now() - startTime) / 1000;
   const pollTime = pollIntervalMs / 1000;
   console.log(
@@ -65,13 +67,16 @@ const scanRetailers = async () => {
   console.groupEnd();
 };
 
-(async () => {
+const updateRetailers = async () => {
   ({ retailers } = await getFromS3());
+};
 
-  browserInstance = await chromium.launchServer({
-    headless: true,
-  });
+(async () => {
+  await updateRetailers();
+  browserInstance = await chromium.launchServer();
   wsEndpoint = browserInstance.wsEndpoint();
+
+  setInterval(updateRetailers, pollIntervalMs * 2);
   setInterval(scanRetailers, pollIntervalMs);
   await scanRetailers();
 })();
